@@ -1,7 +1,6 @@
-package br.com.fiap.patient.application
+package br.com.fiap.patient.application.controller
 
 
-import br.com.fiap.patient.application.controller.PatientApplicationController
 import br.com.fiap.patient.application.dto.request.PatientRequest
 import br.com.fiap.patient.application.dto.response.PatientResponse
 import br.com.fiap.patient.domain.entities.Patient
