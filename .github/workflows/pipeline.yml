@@ -111,7 +111,7 @@ jobs:
       - name: Deploy to EKS using Helm
         run: |
           helm upgrade --install \
-            fiap-patient \
+            fiap-med \
             manifest/fiap-patient \
             --namespace default \
             --set image.repository=${{ secrets.ECR_HOST }}/fiap-patient \
