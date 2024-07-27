@@ -31,4 +31,6 @@ class PatientDomainUseCase(private val patientRepositoryGateway: PatientReposito
 
     fun emailExists(patient: Patient) = patient.email?.let { patientRepositoryGateway.existsByEmail(it) }
 
+    fun findById(id: Long): Patient = id.let {patientRepositoryGateway.findById(it) ?: throw BusinessException(PatientExceptionEnum.PATIENT_NOT_FOUND)}
+
 }

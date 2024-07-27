@@ -9,4 +9,5 @@ interface PatientRepositoryGateway {
     fun findByCpf(cpf: String): Patient?
     fun existsByCpf(cpf: String): Boolean
     fun existsByEmail(email: String): Boolean
+    fun findById(id: Long): Patient?
 }

@@ -26,9 +26,13 @@ class PatientHttpController(private val patientService: PatientApplicationContro
         return ResponseEntity.created(uri).body(patientCreated)
     }
 
-    @GetMapping("/{cpf}")
+    @GetMapping("/{cpf}/cpf")
     fun findByCpf(@PathVariable(required = true) cpf: String) =
         ResponseEntity(patientService.findByCpf(cpf = cpf), HttpStatus.OK)
+
+    @GetMapping("/{id}")
+    fun findById(@PathVariable(required = true) id: Long) =
+        ResponseEntity(patientService.findById(id = id), HttpStatus.OK)
 
 }
 

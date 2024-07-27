@@ -28,9 +28,6 @@ data class Patient(
     @Column(name = "EMAIL", unique = true)
     val email: String?,
 
-    @Column(name = "PASSWORD", unique = false)
-    val password: String?,
-
     @CreatedDate
     @Column(name = "created_date", nullable = false, updatable = false)
     var createDate: LocalDateTime? = null,

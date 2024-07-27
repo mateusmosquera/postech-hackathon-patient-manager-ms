@@ -5,6 +5,5 @@ import jakarta.validation.constraints.NotBlank
 import org.hibernate.validator.constraints.br.CPF
 
 data class PatientRequest(@field:CPF @field:NotBlank val cpf: String?,
-                          @field:NotBlank val nome: String?,
-                          @field:Email @field:NotBlank val email: String?,
-                          @field:NotBlank val password: String?)
+                          @field:NotBlank val name: String?,
+                          @field:Email @field:NotBlank val email: String?)

@@ -16,4 +16,7 @@ class PatientApplicationController(private val patientDomainUseCase: PatientDoma
     fun findByCpf(cpf: String): PatientResponse =
         patientDomainUseCase.findByCpf(cpf).toDTO()
 
+    fun findById(id: Long): PatientResponse =
+        patientDomainUseCase.findById(id).toDTO()
+
 }
