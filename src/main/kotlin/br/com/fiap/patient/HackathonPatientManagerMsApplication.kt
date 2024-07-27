@@ -1,8 +1,12 @@
-package br.com.fiap.patient.hackathon_patient_manager_ms
+package br.com.fiap.patient
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.cloud.openfeign.EnableFeignClients
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing
 
+@EnableJpaAuditing
+@EnableFeignClients
 @SpringBootApplication
 class HackathonPatientManagerMsApplication
 
